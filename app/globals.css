@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg-color: "#121212";
+  --secondary-bg-color: "#1e1e1e";
+  --primary-text-color: "#ffffff";
+  --secondary-text-color: "#a0a0a0";
+  --accent-color: "#673ab7";
+  --accent-hover-color: "#7e57c2";
+  --card-bg-color: "#1e1e1e";
+  --card-hover-bg-color: "#2e2e2e";
+  --border-color: "#3e3e3e";
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+.markdown-body :where(h1, h2, h3) {
+  font-weight: 600;
+  margin-top: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.markdown-body :where(p, ul, ol) {
+  margin: 0.35rem 0;
+}
+
+.markdown-body :where(ul, ol) {
+  padding-left: 1.25rem;
+}
+
+.markdown-body :where(a) {
+  color: rgb(109 40 217);
+  text-decoration: underline;
+}
+
+.dark .markdown-body :where(a) {
+  color: rgb(196 181 253);
+}
